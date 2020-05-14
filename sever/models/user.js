@@ -17,5 +17,4 @@ const user = mongoose.model("user",new mongoose.Schema({
   //   user:'admin',
   //   pwd:'123456',
   // });
-
 module.exports = user;

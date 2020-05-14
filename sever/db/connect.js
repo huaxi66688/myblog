@@ -1,14 +1,16 @@
 const mongoose = require('mongoose');
-mongoose.connect(
-    ('mongodb+srv://expressblogs:xql123@cluster0-1m7dj.mongodb.net/test?retryWrites=true&w=majority'),
-    { 
-        useNewUrlParser: true,
-        useUnifiedTopology:true
-    }
-)
-    .then(()=>{
-        console.log( '数据库连接成功' )
-    })
-    .catch((err)=>{
-        console.log( err )
+// mongoose.connect('mongodb://localhost:27017/blogPro',{useNewUrlParser:true,useUnifiedTopology: true },(err)=>{
+//     if(err){
+//         console.log('数据库连接失败')
+//         return
+//     }else{
+//         console.log('blogpro数据库连接成功')
+//     }
+// })
+
+mongoose.connect('mongodb://localhost:27017/blogpro',{useNewUrlParser:true,useUnifiedTopology: true })
+.then(()=>{console.log('blogpro数据库连接成功')})
+.catch((err)=>{
+    console.log(err)
+    console.log('数据库连接失败')
 })

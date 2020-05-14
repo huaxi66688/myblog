@@ -1,17 +1,8 @@
 const express = require("express");
 const router = express.Router()
 const user = require("../../models/user");
-//登录接口
-// router.get("/",(req,res)=>{
-//     User.find().then(User=>{//传参
-//         if( !User ){
-//             return res.status(404).json('你查不到内容')
-//         }
-//         res.json(User)
-//     })
-// .catch(err =>res.status(404).json( err ))
-// })
-router.get("/",(req,res)=>{
+//测试接口
+router.post("/logins",(req,res)=>{
     user.find().then(User=>{//传参
         if(User){
             res.send({
@@ -32,4 +23,13 @@ router.get("/",(req,res)=>{
         })
     })
 })
+// router.post("/",(req,res)=>{
+//     User.find().then(User=>{//传参
+//         if( !User ){
+//             return res.status(404).json('你查不到内容')
+//         }
+//         res.json(User)
+//     })
+// .catch(err =>res.status(404).json( err ))
+// })
 module.exports = router;
