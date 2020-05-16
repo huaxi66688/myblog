@@ -99,12 +99,16 @@ export default {
     width: 100%;
     user-select: none;
     height:2000px;
-    background: #6bc30d;
+    // background: #6bc30d;
     >.el-container{
       box-sizing: border-box;
       width: 100%;
       margin:0 auto;
       padding:0 50px;
+      >.el-main{
+        padding:0px;
+        margin-right: 20px;
+      }
       >.el-aside{
         width: 300px;
         // background-color: aqua;

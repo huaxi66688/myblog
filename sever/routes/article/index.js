@@ -9,12 +9,14 @@ router.post("/getTag",(req,res)=>{
    let { skip,limit,tag } = req.body;
    console.log(skip,limit,tag )
   // let options = tag?{tag}:{}
-  articleinfo.find({tag},{__v:0},{skip,limit})
+  let option =tag?{tag}:{}
+    articleinfo.find(option,{__v:0},{skip,limit,sort:{pv:-1}})
     .then(data=>{
-      res.send({
-        code : 0,
-        data
-      });
+        console.log(data)
+        res.send({
+          code:0,
+          data
+        });
     })
     .catch(err=>{
       res.send({
@@ -47,7 +49,7 @@ router.post("/getHot",(req,res)=>{
   //过滤键值    sort排序,skip个数,limt个数
   articleinfo.find({},{__v:0},{sort:{pv:-1},skip:0,limit:8})
     .then(data=>{
-         console.log(data)
+         //console.log(data)
         res.send({
            code : 0,
            data

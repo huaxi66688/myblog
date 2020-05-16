@@ -13,7 +13,7 @@ console.log(process.env.NODE_ENV);
 
 // 添加请求拦截器
 service.interceptors.request.use(function (config) {
-  debugger
+  //debugger
   return config;
 },function (error) {
   // 对请求错误做些什么

@@ -8,7 +8,7 @@
         <div class="nav-nav   col-lg-7 d-none d-sm-block">
                    <ul class='new clearfix'>
                       <li><router-link to="/home">首页</router-link></li>
-                      <li><router-link to="{name:'Blog',query:'0'}">博客</router-link></li>
+                      <li><router-link to="/blog/0">博客</router-link></li>
                       <li><router-link to="/message">留言</router-link></li>
                       <li><router-link to="/diary">日记</router-link></li>
                       <li><router-link to="/links">友链</router-link></li>
@@ -45,7 +45,6 @@
         // background-color: red;
         .logos{
           float:left;
-
         }
         .logoss{
               float:right;
